@@ -26,7 +26,7 @@ public class AppModule {
         return mApp;
     }
 
-
+    @Singleton
     @Provides
     public PresenterImpl providePresenter(){
         return new PresenterImpl();
