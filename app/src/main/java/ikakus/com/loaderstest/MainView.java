@@ -5,5 +5,5 @@ package ikakus.com.loaderstest;
  */
 
 interface MainView {
-    void showToast();
+    void showToast(String s);
 }

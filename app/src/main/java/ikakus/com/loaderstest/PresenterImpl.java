@@ -7,13 +7,19 @@ import android.util.Log;
  */
 
 public class PresenterImpl implements Presenter<MainView> {
+    int counter = 0;
     public PresenterImpl() {
         Log.d("Presenter", "Constructor call");
     }
 
     @Override
     public void onViewAttached(MainView view) {
-        view.showToast();
+        if(counter == 0) {
+            view.showToast("Hello");
+        }else {
+            view.showToast(Integer.toString(counter));
+        }
+        counter++;
     }
 
     @Override
